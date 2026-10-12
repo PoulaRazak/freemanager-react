@@ -1,5 +1,8 @@
 import { Icon } from "@iconify/react";
 import AnalysisCard from "../../components/analysis-card/view";
+import { ProgressRing } from "../../components/progress-ring/view";
+import { PlatformMixCard } from "../../components/platforms/view";
+import { IncomeOverview } from "../../components/income-chart/view";
 
 const now = new Date();
 const currentMonth = now.toLocaleDateString("en-US", {
@@ -64,13 +67,17 @@ function Overview() {
               <p className="text-xs text-[#B9C6F2]">Welcome back,</p>
               <h2 className="text-[21px] font-bold text-white">Poula Razak</h2>
               <p className="mb-3 text-[12.5px] leading-relaxed text-[#AEBBE8]">
-                Your income is up 18% this month — keep it going.
+                Your income is up 18% this month - keep it going.
               </p>
               <button className="inline-flex items-center gap-1.5 rounded-[9px] border border-white/20 bg-white/10 px-3.5 py-2 text-[12.5px] font-semibold text-white transition-colors hover:bg-white/20">
                 Add Income →
               </button>
             </div>
           </div>
+         <PlatformMixCard />
+        </div>
+        <div className=" gap-4 items-center">
+            <IncomeOverview/>
         </div>
       </div>
     </>
