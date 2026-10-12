@@ -1,6 +1,6 @@
 import logo from "../../../public/logo.png";
 import { Icon } from "@iconify/react";
-
+import { Link } from "react-router";
 
 const SidebarItems = [
   { label: "Overview", href: "/dashboard", icon: "cuida:dashboard-outline" },
@@ -18,6 +18,9 @@ export function Navbar() {
             Freemanager
           </span>
         </div>
+        <p className="px-3.5 py-2 text-[10px] font-semibold text-slate-200">
+          Freelancer Management Money
+        </p>
         <div className="flex flex-col gap-0.5 mt-6">
           {SidebarItems.map(({ label, href, icon }) => {
             return (
