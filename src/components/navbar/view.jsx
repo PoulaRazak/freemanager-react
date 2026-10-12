@@ -1,6 +1,13 @@
 import logo from "../../../public/logo.png";
 import { Icon } from "@iconify/react";
 
+
+const SidebarItems = [
+  { label: "Overview", href: "/dashboard", icon: "cuida:dashboard-outline" },
+  { label: "Transactions", href: "/transactions", icon: "ic:outline-list-alt" },
+  { label: "Platforms", href: "/platforms", icon: "mdi:web" },
+];
+
 export function Navbar() {
   return (
     <>
@@ -12,13 +19,18 @@ export function Navbar() {
           </span>
         </div>
         <div className="flex flex-col gap-0.5 mt-6">
-          <div className="flex items-center gap-2.5 rounded-[10px] px-3 py-2.5 text-[13.5px] transition-colors hover:bg-white/5 hover:text-slate-200">
-            <Icon
-              icon="cuida:dashboard-outline"
-              className="size-4 text-slate-400"
-            />
-            <p className="text-slate-400">Overview</p>
-          </div>
+          {SidebarItems.map(({ label, href, icon }) => {
+            return (
+              <a
+                key={href}
+                href={href}
+                className="flex items-center gap-2.5 rounded-[10px] px-3 py-2.5 text-[13.5px] transition-colors hover:bg-white/5 hover:text-slate-200"
+              >
+                <Icon icon={icon} className="size-4 text-slate-400" />
+                <p className="text-slate-400">{label}</p>
+              </a>
+            );
+          })}
         </div>
       </div>
     </>
