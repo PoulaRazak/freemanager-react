@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
-import AnalysisCard from "../../components/analysis-card/view";
-import { ProgressRing } from "../../components/progress-ring/view";
-import { PlatformMixCard } from "../../components/platforms/view";
-import { IncomeOverview } from "../../components/income-chart/view";
+import AnalysisCard from "../../components/analysis-card";
+import { ProgressRing } from "../../components/progress-ring";
+import { PlatformMixCard } from "../../components/platforms";
+import { IncomeOverview } from "../../components/income-chart";
 
 const now = new Date();
 const currentMonth = now.toLocaleDateString("en-US", {
@@ -74,10 +74,10 @@ function Overview() {
               </button>
             </div>
           </div>
-         <PlatformMixCard />
+          <PlatformMixCard />
         </div>
         <div className=" gap-4 items-center">
-            <IncomeOverview/>
+          <IncomeOverview />
         </div>
       </div>
     </>

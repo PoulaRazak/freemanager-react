@@ -1,6 +1,5 @@
 import logo from "../../../public/logo.png";
 import { Icon } from "@iconify/react";
-import { Link } from "react-router";
 
 const SidebarItems = [
   { label: "Overview", href: "/dashboard", icon: "cuida:dashboard-outline" },
@@ -11,7 +10,7 @@ const SidebarItems = [
 export function Navbar() {
   return (
     <>
-      <div className="flex-col gap-6 px-3.5 py-6">
+      <div className="flex-col gap-6 px-3.5 py-6 sticky top-0 left-0 h-screen w-[250px] bg-[#0A1030]">
         <div className="flex items-center gap-2 px-2">
           <img src={logo} alt="Logo" className="h-8" />
           <span className="text-[20px] font-bold text-slate-50">
@@ -35,6 +34,10 @@ export function Navbar() {
             );
           })}
         </div>
+        {/* <div className="flex flex-row gap-2 items-center ">
+          <img src={logo} alt="Logo" className="h-8 rounded-full"/>
+          <p className="text-[13px] font-semibold text-slate-50">John Doe</p>
+        </div> */}
       </div>
     </>
   );

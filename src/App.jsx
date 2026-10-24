@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import './App.css'
-import { Navbar } from './components/navbar/view'
-import Footer from './components/footer/view'
-import Overview from './pages/overview/view'
+import { Navbar } from './components/navbar'
+import Footer from './components/footer'
+import Overview from './pages/overview'
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
         <Navbar/>
         <Overview/>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }

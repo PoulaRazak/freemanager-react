@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import { ProgressRing } from "../../components/progress-ring/view";
+import { ProgressRing } from "../progress-ring";
 
 const PLATFORMS = [
   { name: "Upwork", icon: "thesvg-color:upwork", amount: 1000 },
